@@ -1,0 +1,39 @@
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo {
+    width: 5rem;
+}
+
+.navigation {
+    width: 25rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: black;
+}
+
+.search {
+    width: 30rem;
+    font-size: 16px;
+    padding: 3px 5px;
+    outline: none;
+    margin-left: 5px;
+}
+
+.rightIcons{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 200px;
+}
+
+.rightIcons p {
+    text-align: center;
+}

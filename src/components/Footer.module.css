@@ -1,0 +1,62 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+}
+
+.footerNavigation {
+    display: flex;
+    justify-content: space-around;
+}
+
+.navlink {
+    display: flex;
+    flex-direction: column;
+}
+
+.navlink a {
+    text-decoration: none;
+    color: gray;
+    margin-bottom: 7px;
+}
+
+.commitment {
+    display: flex;
+    justify-content: center;
+    gap: 10rem;
+}
+
+.guarantee {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.guarantee span {
+    font-size: 2rem;
+}
+
+.contact {
+    display: flex;
+    justify-content: space-around;
+}
+
+.socialMedia {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.8rem;
+}
+
+.socialMedia a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+}
+
+.mobileApp a {
+    color: black;
+    font-size: 1.5rem;
+    margin-right: 0.8rem;
+}
