@@ -18,8 +18,8 @@ function Header() {
           <a href="#">Home & Living</a>
           <a href="#">Beauty</a>
         </div>
-        <div>
-          <span>
+        <div className={styles.searchDiv}>
+          <span className={styles.searchIcon}>
             <CiSearch />
           </span>
           <input
@@ -43,8 +43,11 @@ function Header() {
             <br /> Wishlist
           </p>
           <p>
-            <span>
+            <span className="position-relative">
               <BsFillBagCheckFill />
+              <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                3
+              </span>
             </span>
             <br /> Bag
           </p>
