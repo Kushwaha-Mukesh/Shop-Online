@@ -5,8 +5,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import HomeItems from "./components/HomeItems";
 import Loader from "./components/Loader";
+import { Outlet } from "react-router-dom";
 
 function App() {
   const [loader, setLoader] = useState(false);
@@ -24,7 +24,7 @@ function App() {
     <>
       <Header />
       {loader && <Loader />}
-      <HomeItems />
+      <Outlet />
       <Footer />
     </>
   );

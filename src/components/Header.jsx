@@ -3,13 +3,18 @@ import { VscAccount } from "react-icons/vsc";
 import { FaRegHeart } from "react-icons/fa";
 import { BsFillBagCheckFill } from "react-icons/bs";
 import { CiSearch } from "react-icons/ci";
+import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 function Header() {
+  const bagItems = useSelector((store) => store.BagItems);
   return (
     <>
       <div className={styles.header}>
         <div>
-          <img src="images/logo.jpg" alt="logo" className={styles.logo} />
+          <Link to={"/"}>
+            <img src="images/logo.jpg" alt="logo" className={styles.logo} />
+          </Link>
         </div>
         <div className={styles.navigation}>
           <a href="#">Men</a>
@@ -43,13 +48,15 @@ function Header() {
             <br /> Wishlist
           </p>
           <p>
-            <span className="position-relative">
-              <BsFillBagCheckFill />
-              <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                3
+            <Link to={"/bag"}>
+              <span className="position-relative">
+                <BsFillBagCheckFill />
+                <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                  {bagItems.length}
+                </span>
               </span>
-            </span>
-            <br /> Bag
+              <br /> Bag
+            </Link>
           </p>
         </div>
       </div>

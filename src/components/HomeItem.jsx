@@ -1,5 +1,19 @@
+import { useDispatch, useSelector } from "react-redux";
+import {
+  removeBagItems,
+  setAddRemoveButton,
+  setBagItems,
+} from "../store/index";
 import styles from "./HomeItem.module.css";
 function HomeItem({ products }) {
+  const addRemove = useSelector((store) => store.addRemoveButton);
+  const dispatch = useDispatch();
+  const handleAdd = (product) => {
+    dispatch(setBagItems(product));
+  };
+  const handleRemove = (product) => {
+    dispatch(removeBagItems(product));
+  };
   return (
     <>
       {products.map((product) => {
@@ -25,7 +39,21 @@ function HomeItem({ products }) {
               <p className={`card-text ${styles.description}`}>
                 {product.description}
               </p>
-              <button className="btn btn-success">Add To Bag</button>
+              {addRemove ? (
+                <button
+                  className="btn btn-success"
+                  onClick={() => handleAdd(product)}
+                >
+                  Add To Bag
+                </button>
+              ) : (
+                <button
+                  className="btn btn-danger"
+                  onClick={() => handleRemove(product)}
+                >
+                  Remove From Bag
+                </button>
+              )}
             </div>
           </div>
         );
