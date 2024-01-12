@@ -4,7 +4,9 @@ function HomeItems() {
   const products = useSelector((store) => store.ProductItem);
   return (
     <div className="homeItems">
-      <HomeItem products={products} />
+      {products.map((product) => (
+        <HomeItem product={product} />
+      ))}
     </div>
   );
 }

@@ -10,6 +10,7 @@ function BagSummary({ bagItems }) {
     <div className="card bagSummary">
       <div className="card-body">
         <h5>Bag Summary</h5>
+        <hr />
         <p>
           <span>Total Items:</span>
           <span>{bagItems.length}</span>
@@ -31,7 +32,7 @@ function BagSummary({ bagItems }) {
           <span>Total Amount:</span>
           <span>${MRP - totalDiscount + 100}</span>
         </p>
-        <button>PLACE ORDER</button>
+        <button className="btn btn-success">PLACE ORDER</button>
       </div>
     </div>
   );

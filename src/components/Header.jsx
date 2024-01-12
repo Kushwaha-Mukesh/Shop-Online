@@ -51,9 +51,11 @@ function Header() {
             <Link to={"/bag"}>
               <span className="position-relative">
                 <BsFillBagCheckFill />
-                <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                  {bagItems.length}
-                </span>
+                {bagItems.length > 0 && (
+                  <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    {bagItems.length}
+                  </span>
+                )}
               </span>
               <br /> Bag
             </Link>

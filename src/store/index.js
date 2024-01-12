@@ -25,26 +25,14 @@ const BagItemsSlice = createSlice({
     }
 });
 
-const AddRemoveButtonSlice = createSlice({
-    name: "addRemoveButton",
-    initialState: true,
-    reducers: {
-        setAddRemoveButton: (state) => {
-            return !state;
-        }
-    }
-});
-
 
 const store = configureStore({
     reducer: {
         ProductItem: ProductItemSlice.reducer,
-        BagItems: BagItemsSlice.reducer,
-        addRemoveButton: AddRemoveButtonSlice.reducer
+        BagItems: BagItemsSlice.reducer
     }
 })
 
 export const {setProductItem} = ProductItemSlice.actions;
-export const {setAddRemoveButton} = AddRemoveButtonSlice.actions;
 export const {setBagItems, removeBagItems} = BagItemsSlice.actions;
 export default store;
