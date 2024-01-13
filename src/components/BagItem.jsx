@@ -1,5 +1,6 @@
 import { useDispatch } from "react-redux";
 import { removeBagItems } from "../store/index";
+import { Link } from "react-router-dom";
 
 function BagItem({ bagItem }) {
   const dispatch = useDispatch();
@@ -18,14 +19,16 @@ function BagItem({ bagItem }) {
         alt="product image"
       />
       <div className="card-body">
-        <p className="price">
-          <span>${bagItem.price}</span>
-          <span className="badge rounded-pill bg-danger text-white">
-            {bagItem.discountPercentage}% off
-          </span>
-        </p>
-        <h5 className="card-title">{bagItem.title}</h5>
-        <p className="card-text description">{bagItem.description}</p>
+        <Link to={`/product/${bagItem.id}/${bagItem.title}`} className="link">
+          <p className="price">
+            <span>${bagItem.price}</span>
+            <span className="badge rounded-pill bg-danger text-white">
+              {bagItem.discountPercentage}% off
+            </span>
+          </p>
+          <h5 className="card-title">{bagItem.title}</h5>
+          <p className="card-text description">{bagItem.description}</p>
+        </Link>
         <button
           className="btn btn-danger"
           onClick={() => handleRemove(bagItem)}

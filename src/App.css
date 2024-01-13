@@ -2,6 +2,11 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+.link {
+   text-decoration: none;
+   color: black;
+}
+
 .homeItems {
     display: flex;
     flex-wrap: wrap;
@@ -31,6 +36,7 @@
 }
 
 .productItem button {
+   margin-top: 20px;
    width: 100%;
 }
 
@@ -85,4 +91,13 @@
    justify-content: center;
    align-items: center;
    flex-direction: column;
+ }
+
+ .product_item {
+   display: flex;
+   gap: 5rem;
+   justify-content: center;
+   align-items: center;
+   width: 100vw;
+   height: 100vh;
  }

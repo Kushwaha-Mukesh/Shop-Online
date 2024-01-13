@@ -48,7 +48,7 @@ function Header() {
             <br /> Wishlist
           </p>
           <p>
-            <Link to={"/bag"}>
+            <Link to={"/bag"} className="link">
               <span className="position-relative">
                 <BsFillBagCheckFill />
                 {bagItems.length > 0 && (
