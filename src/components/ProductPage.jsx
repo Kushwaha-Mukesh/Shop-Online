@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { removeBagItems, setBagItems } from "../store/index";
+import { useState } from "react";
 
 function ProductPage() {
   const { id } = useParams();
@@ -15,27 +16,29 @@ function ProductPage() {
   const handleRemove = (productDetail) => {
     dispatch(removeBagItems(productDetail));
   };
+  const [images, setImages] = useState(productDetail.images[0]);
   return (
     <div className="product_item">
       <div className="images">
-        <img src={productDetail.images[0]} alt="product_images" />
+        <img src={images} alt="product_images" className="image_box" />
       </div>
       <div className="item_details">
-        <p>{productDetail.title}</p>
-        <p>{productDetail.rating}⭐</p>
-        <p>
-          <span>${productDetail.price}</span>
-          <span> {productDetail.discountPercentage}%</span>
+        <h2>{productDetail.title}</h2>
+        <h5>Rating: {productDetail.rating}⭐</h5>
+        <p className="price">
+          <span>Price: ${productDetail.price}</span>
+          <span className="badge rounded-pill bg-danger text-white">
+            {productDetail.discountPercentage}% off
+          </span>
         </p>
-        <p>{productDetail.brand}</p>
-        <p>{productDetail.stock}</p>
+        <p>
+          Brand: <strong>{productDetail.brand}</strong>
+        </p>
+        <p>Stock: {productDetail.stock}</p>
         <p>{productDetail.description}</p>
         {productDetail.images.map((image) => (
-          <img
-            src={image}
-            style={{ width: "5rem", margin: "0 10px 10px 0", height: "5rem" }}
-          />
-        ))}{" "}
+          <img src={image} onClick={() => setImages(image)} />
+        ))}
         <br />
         {addRemove ? (
           <button
