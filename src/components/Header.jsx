@@ -3,11 +3,29 @@ import { VscAccount } from "react-icons/vsc";
 import { FaRegHeart } from "react-icons/fa";
 import { BsFillBagCheckFill } from "react-icons/bs";
 import { CiSearch } from "react-icons/ci";
-import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { useRef } from "react";
+import { setSearchItems } from "../store/index";
 
 function Header() {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
   const bagItems = useSelector((store) => store.BagItems);
+  const searchItem = useRef();
+  function handleSearch(e) {
+    if (e.key === "Enter") {
+      const search = searchItem.current.value;
+      if (search) {
+        fetch(`https://dummyjson.com/products/search?q=${search}`)
+          .then((res) => res.json())
+          .then((data) => {
+            dispatch(setSearchItems(data.products));
+          });
+        navigate("/search");
+      }
+    }
+  }
   return (
     <>
       <div className={styles.header}>
@@ -30,6 +48,8 @@ function Header() {
           <input
             type="search"
             name="search"
+            ref={searchItem}
+            onKeyDown={(e) => handleSearch(e)}
             className={styles.search}
             placeholder="Search for products, brands and more"
           />

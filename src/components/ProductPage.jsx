@@ -18,7 +18,7 @@ function ProductPage() {
   };
   const [images, setImages] = useState(productDetail.images[0]);
   return (
-    <div className="product_item">
+    <div key={productDetail.id} className="product_item">
       <div className="images">
         <img src={images} alt="product_images" className="image_box" />
       </div>

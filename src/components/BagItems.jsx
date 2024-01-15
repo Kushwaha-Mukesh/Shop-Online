@@ -10,7 +10,7 @@ function BagItems() {
         <div className="bagItems">
           <div className="bagItem">
             {bagItems.map((bagItem) => (
-              <BagItem bagItem={bagItem} />
+              <BagItem key={bagItem.id} bagItem={bagItem} />
             ))}
           </div>
 

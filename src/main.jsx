@@ -7,6 +7,7 @@ import { Provider } from "react-redux";
 import HomeItems from "./components/HomeItems.jsx";
 import BagItems from "./components/BagItems.jsx";
 import ProductPage from "./components/ProductPage.jsx";
+import Search from "./components/Search.jsx";
 
 const routes = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ const routes = createBrowserRouter([
       {
         path: "/product/:id/:title",
         element: <ProductPage />,
+      },
+      {
+        path: "/search",
+        element: <Search />,
       },
     ],
   },
