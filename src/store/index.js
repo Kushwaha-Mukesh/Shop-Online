@@ -35,16 +35,28 @@ const searchItemsSlice = createSlice({
     }
 })
 
+const wishlistSlice = createSlice({
+    name: "Wishlist",
+    initialState: [],
+    reducers: {
+        setWishlists: (state, action) => {
+            return [action.payload, ...state]
+        }
+    }
+})
+
 
 const store = configureStore({
     reducer: {
         ProductItem: ProductItemSlice.reducer,
         BagItems: BagItemsSlice.reducer,
-        SearchItems: searchItemsSlice.reducer
+        SearchItems: searchItemsSlice.reducer,
+        Wishlist: wishlistSlice.reducer
     }
 })
 
 export const {setProductItem} = ProductItemSlice.actions;
 export const {setBagItems, removeBagItems} = BagItemsSlice.actions;
 export const {setSearchItems} = searchItemsSlice.actions;
+export const {setWishlists} = wishlistSlice.actions;
 export default store;

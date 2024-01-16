@@ -8,6 +8,7 @@ import HomeItems from "./components/HomeItems.jsx";
 import BagItems from "./components/BagItems.jsx";
 import ProductPage from "./components/ProductPage.jsx";
 import Search from "./components/Search.jsx";
+import Wishlist from "./components/Wishlist.jsx";
 
 const routes = createBrowserRouter([
   {
@@ -29,6 +30,10 @@ const routes = createBrowserRouter([
       {
         path: "/search",
         element: <Search />,
+      },
+      {
+        path: "/wishlist",
+        element: <Wishlist />,
       },
     ],
   },

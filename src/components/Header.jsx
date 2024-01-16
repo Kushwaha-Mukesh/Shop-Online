@@ -2,6 +2,7 @@ import styles from "./Header.module.css";
 import { VscAccount } from "react-icons/vsc";
 import { FaRegHeart } from "react-icons/fa";
 import { BsFillBagCheckFill } from "react-icons/bs";
+import { FaHeart } from "react-icons/fa";
 import { CiSearch } from "react-icons/ci";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
@@ -12,6 +13,7 @@ function Header() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const bagItems = useSelector((store) => store.BagItems);
+  const wishlist = useSelector((store) => store.Wishlist);
   const searchItem = useRef();
   function handleSearch(e) {
     if (e.key === "Enter") {
@@ -62,10 +64,12 @@ function Header() {
             <br /> Profile
           </p>
           <p>
-            <span>
-              <FaRegHeart />
-            </span>
-            <br /> Wishlist
+            <Link to={"/wishlist"} className="link">
+              <span>
+                {wishlist.length === 0 ? <FaRegHeart /> : <FaHeart />}
+              </span>
+              <br /> Wishlist
+            </Link>
           </p>
           <p>
             <Link to={"/bag"} className="link">

@@ -1,15 +1,24 @@
 import { useDispatch, useSelector } from "react-redux";
-import { removeBagItems, setBagItems } from "../store/index";
+import { removeBagItems, setBagItems, setWishlists } from "../store/index";
+import { FaRegHeart } from "react-icons/fa";
+import { FaHeart } from "react-icons/fa";
 import { Link } from "react-router-dom";
 function HomeItem({ product }) {
   const bagItems = useSelector((store) => store.BagItems);
+  const wishlists = useSelector((store) => store.Wishlist);
   const addRemove = bagItems.find((bagItem) => bagItem.id === product.id);
+  const changeWishlistIcon = wishlists.find(
+    (wishlist) => wishlist.id === product.id
+  );
   const dispatch = useDispatch();
   const handleAdd = (product) => {
     dispatch(setBagItems(product));
   };
   const handleRemove = (product) => {
     dispatch(removeBagItems(product));
+  };
+  const handleAddWishlist = (product) => {
+    dispatch(setWishlists(product));
   };
   return (
     <div
@@ -22,6 +31,9 @@ function HomeItem({ product }) {
         className="card-img-top"
         alt="product image"
       />
+      <div className="wishlist" onClick={() => handleAddWishlist(product)}>
+        {changeWishlistIcon ? <FaHeart /> : <FaRegHeart />}
+      </div>
       <div className="card-body">
         <Link to={`/product/${product.id}/${product.title}`} className="link">
           <p className="price">

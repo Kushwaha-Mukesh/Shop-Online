@@ -27,6 +27,7 @@
 
 .productItem img {
    height: 15rem;
+   transition: all 0.9s ease-in-out;
 }
 
 .description, h5 {
@@ -123,3 +124,19 @@
    cursor: pointer;
    border: 2px solid rgb(133, 123, 123);
  }
+
+ .wishlist {
+   position: absolute;
+   height: 15rem;
+   width: 100%;
+   display: none;
+   font-size: 5rem;
+ }
+
+ .productItem img:hover + .wishlist {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: transparent;
+   color: black;
+}

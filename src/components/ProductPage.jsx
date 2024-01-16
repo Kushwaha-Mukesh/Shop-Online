@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { removeBagItems, setBagItems } from "../store/index";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function ProductPage() {
   const { id } = useParams();
