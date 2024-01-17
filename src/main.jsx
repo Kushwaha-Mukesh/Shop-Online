@@ -9,6 +9,7 @@ import BagItems from "./components/BagItems.jsx";
 import ProductPage from "./components/ProductPage.jsx";
 import Search from "./components/Search.jsx";
 import Wishlist from "./components/Wishlist.jsx";
+import Category from "./components/Category.jsx";
 
 const routes = createBrowserRouter([
   {
@@ -34,6 +35,10 @@ const routes = createBrowserRouter([
       {
         path: "/wishlist",
         element: <Wishlist />,
+      },
+      {
+        path: "/category/:category",
+        element: <Category />,
       },
     ],
   },

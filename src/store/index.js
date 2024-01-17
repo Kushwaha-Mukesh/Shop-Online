@@ -39,8 +39,13 @@ const wishlistSlice = createSlice({
     name: "Wishlist",
     initialState: [],
     reducers: {
-        setWishlists: (state, action) => {
+        setWishlist: (state, action) => {
             return [action.payload, ...state]
+        },
+
+        removeWishlist: (state, action) => {
+            const newState = state.filter((currState) => currState.id !== action.payload.id);
+            return newState;
         }
     }
 })
@@ -58,5 +63,5 @@ const store = configureStore({
 export const {setProductItem} = ProductItemSlice.actions;
 export const {setBagItems, removeBagItems} = BagItemsSlice.actions;
 export const {setSearchItems} = searchItemsSlice.actions;
-export const {setWishlists} = wishlistSlice.actions;
+export const {setWishlist, removeWishlist} = wishlistSlice.actions;
 export default store;

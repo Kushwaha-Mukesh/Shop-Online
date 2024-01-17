@@ -1,5 +1,10 @@
 import { useDispatch, useSelector } from "react-redux";
-import { removeBagItems, setBagItems, setWishlists } from "../store/index";
+import {
+  removeBagItems,
+  removeWishlist,
+  setBagItems,
+  setWishlist,
+} from "../store/index";
 import { FaRegHeart } from "react-icons/fa";
 import { FaHeart } from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -18,7 +23,10 @@ function HomeItem({ product }) {
     dispatch(removeBagItems(product));
   };
   const handleAddWishlist = (product) => {
-    dispatch(setWishlists(product));
+    dispatch(setWishlist(product));
+  };
+  const handleRemoveWishlist = (product) => {
+    dispatch(removeWishlist(product));
   };
   return (
     <div
@@ -31,8 +39,12 @@ function HomeItem({ product }) {
         className="card-img-top"
         alt="product image"
       />
-      <div className="wishlist" onClick={() => handleAddWishlist(product)}>
-        {changeWishlistIcon ? <FaHeart /> : <FaRegHeart />}
+      <div className="wishlist">
+        {changeWishlistIcon ? (
+          <FaHeart onClick={() => handleRemoveWishlist(product)} />
+        ) : (
+          <FaRegHeart onClick={() => handleAddWishlist(product)} />
+        )}
       </div>
       <div className="card-body">
         <Link to={`/product/${product.id}/${product.title}`} className="link">

@@ -37,24 +37,39 @@ function Header() {
           </Link>
         </div>
         <div className={styles.navigation}>
-          <a href="#">Men</a>
-          <a href="#">Women</a>
-          <a href="#">Kids</a>
-          <a href="#">Home & Living</a>
-          <a href="#">Beauty</a>
+          <Link to={"/category/men"} className="link">
+            <a href="#">Men</a>
+          </Link>
+          <Link to={"/category/women"} className="link">
+            <a href="#">Women</a>
+          </Link>
+          <Link to={"/category/automotive"} className="link">
+            <a href="#">Automotive</a>
+          </Link>
+          <Link to={"/category/homeLiving"} className="link">
+            <a href="#">Home & Living</a>
+          </Link>
+          <Link to={"/category/beauty"} className="link">
+            <a href="#">Beauty</a>
+          </Link>
+          <Link to={"/category/electronics"} className="link">
+            <a href="#">Electronics</a>
+          </Link>
         </div>
         <div className={styles.searchDiv}>
-          <span className={styles.searchIcon}>
-            <CiSearch />
-          </span>
-          <input
-            type="search"
-            name="search"
-            ref={searchItem}
-            onKeyDown={(e) => handleSearch(e)}
-            className={styles.search}
-            placeholder="Search for products, brands and more"
-          />
+          <label>
+            <span className={styles.searchIcon}>
+              <CiSearch />
+            </span>
+            <input
+              type="search"
+              name="search"
+              ref={searchItem}
+              onKeyDown={(e) => handleSearch(e)}
+              className={styles.search}
+              placeholder="Search for products, brands and more"
+            />
+          </label>
         </div>
         <div className={styles.rightIcons}>
           <p>

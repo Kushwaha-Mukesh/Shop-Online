@@ -25,12 +25,12 @@ function BagSummary({ bagItems }) {
         </p>
         <p>
           <span>Delivery Fee:</span>
-          <span>$100</span>
+          <span>N/A</span>
         </p>
         <hr />
         <p>
           <span>Total Amount:</span>
-          <span>${MRP - totalDiscount + 100}</span>
+          <span>${MRP - totalDiscount}</span>
         </p>
         <button className="btn btn-success">PLACE ORDER</button>
       </div>

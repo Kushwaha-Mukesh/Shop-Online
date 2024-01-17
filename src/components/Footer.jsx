@@ -7,6 +7,7 @@ import { VscWorkspaceTrusted } from "react-icons/vsc";
 import { GiReturnArrow } from "react-icons/gi";
 import { BsGooglePlay } from "react-icons/bs";
 import { IoLogoApple } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -15,12 +16,27 @@ function Footer() {
         <div className={styles.footerNavigation}>
           <div className={styles.navlink}>
             <h5>ONLINE SHOPPING</h5>
-            <a href="#">Men</a>
-            <a href="#">Women</a>
-            <a href="#">Kids</a>
-            <a href="#">Home & Living</a>
-            <a href="#">Beauty</a>
-            <a href="#">Gift Cards</a>
+            <Link to={"/category/men"} className="link">
+              Men
+            </Link>
+            <Link to={"/category/women"} className="link">
+              Women
+            </Link>
+            <Link to={"/category/automotive"} className="link">
+              Automotive
+            </Link>
+            <Link to={"/category/homeLiving"} className="link">
+              Home & Living
+            </Link>
+            <Link to={"/category/beauty"} className="link">
+              Beauty
+            </Link>
+            <Link to={"/category/electronics"} className="link">
+              Electronics
+            </Link>
+            <Link to="#" className="link">
+              Gift Cards
+            </Link>
           </div>
           <div className={styles.navlink}>
             <h5>USEFUL LINKS</h5>
