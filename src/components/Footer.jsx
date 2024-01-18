@@ -84,7 +84,11 @@ function Footer() {
         <div>
           <div className={styles.contact}>
             <div className={styles.mobileApp}>
-              <h5>SHOP ONLINE ON MOBILE</h5>
+              <h5>
+                SHOP ONLINE
+                <br />
+                ON MOBILE
+              </h5>
 
               <a href="">
                 <BsGooglePlay />

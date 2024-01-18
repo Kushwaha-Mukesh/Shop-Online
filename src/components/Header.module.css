@@ -4,6 +4,7 @@
     justify-content: space-evenly;
     align-items: center;
     padding-top: 15px;
+    gap: 1rem;
 }
 
 .logo {
@@ -62,4 +63,53 @@
 
 .rightIcons p {
     text-align: center;
+}
+
+.hamburger {
+    display: none;
+}
+
+@media (max-width:768px) {
+    .rightIcons {
+        display: none;
+    }
+
+    .navigation {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+        font-size: 25px;
+        cursor: pointer;
+        position: relative;
+    }
+
+    .hamburgerNavigation {
+        font-size: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+        position: absolute;
+        left: -50px;
+        z-index: 2;
+        background-color: rgb(219, 210, 210);
+        padding: 10px 20px;
+        border-radius: 7px;
+        width: max-content;
+    }
+
+    .hamburgerNavigation a:hover {
+        border-bottom: 1px solid black;
+    }
+
+    .hamburgerNavigation a span {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .showhamburgerNavigation {
+        display: none;
+    }
 }

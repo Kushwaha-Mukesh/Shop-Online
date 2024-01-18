@@ -8,7 +8,8 @@
 
 .footerNavigation {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 .navlink {
@@ -24,8 +25,9 @@
 
 .commitment {
     display: flex;
-    justify-content: center;
-    gap: 10rem;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
 }
 
 .guarantee {
@@ -44,6 +46,7 @@
 .contact {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .socialMedia {
@@ -62,4 +65,28 @@
     color: black;
     font-size: 1.5rem;
     margin-right: 0.8rem;
+}
+
+@media (max-width: 576px) {
+    .footerNavigation {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .commitment {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .contact {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 2rem;
+    }
 }
