@@ -1,3 +1,6 @@
+/* The code is defining a React functional component called `Footer`. It imports various icons from
+different libraries (`react-icons/fa6`, `react-icons/ri`, `react-icons/fa`, `react-icons/vsc`,
+`react-icons/gi`, `react-icons/bs`, `react-icons/io5`) and a CSS module (`./Footer.module.css`). */
 import styles from "./Footer.module.css";
 import { FaFacebook } from "react-icons/fa6";
 import { RiTwitterXLine } from "react-icons/ri";

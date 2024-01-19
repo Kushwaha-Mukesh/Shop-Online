@@ -1,3 +1,6 @@
+/* The code you provided is setting up a Redux store using the `configureStore` function from the
+`@reduxjs/toolkit` package. It also creates multiple slices using the `createSlice` function, which
+allows you to define the initial state and reducers for each slice. */
 import { configureStore, createSlice } from "@reduxjs/toolkit";
 
 const ProductItemSlice = createSlice({

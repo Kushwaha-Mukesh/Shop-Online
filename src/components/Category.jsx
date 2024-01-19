@@ -1,3 +1,4 @@
+/* The code is defining a React functional component called `Category`. */
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import HomeItem from "./HomeItem";

@@ -1,3 +1,4 @@
+/* The code is defining a React functional component called `Wishlist`. */
 import { useSelector } from "react-redux";
 import HomeItem from "./HomeItem";
 

@@ -1,3 +1,9 @@
+/**
+ * The `ProductPage` component is a React component that displays the details of a product and allows
+ * the user to add or remove the product from their bag.
+ * @returns The `ProductPage` component is returning a JSX element, which represents the structure and
+ * content of the component's rendered output.
+ */
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { removeBagItems, setBagItems } from "../store/index";

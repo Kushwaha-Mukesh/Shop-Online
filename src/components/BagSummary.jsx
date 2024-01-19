@@ -1,3 +1,8 @@
+/**
+ * The BagSummary function calculates and displays the total number of items, total MRP, discount on
+ * MRP, delivery fee, total amount, and a button to place an order.
+ * @returns a JSX element that represents the bag summary.
+ */
 function BagSummary({ bagItems }) {
   let MRP = 0;
   let totalDiscount = 0;

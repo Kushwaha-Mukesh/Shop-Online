@@ -1,3 +1,11 @@
+/**
+ * The BagItem component is a React component that renders a card displaying information about a
+ * product in a shopping bag, including an image, price, title, description, and a button to remove the
+ * item from the bag.
+ * @returns The `BagItem` component is returning a JSX element that represents a card displaying
+ * information about a bag item. It includes an image, price, discount percentage, title, description,
+ * and a button to remove the item from the bag.
+ */
 import { useDispatch } from "react-redux";
 import { removeBagItems } from "../store/index";
 import { Link } from "react-router-dom";

@@ -1,3 +1,4 @@
+/* The code is a React component called `Search`. */
 import { useSelector } from "react-redux";
 import HomeItem from "./HomeItem";
 

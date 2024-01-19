@@ -1,3 +1,7 @@
+/**
+ * The `Header` function is a React component that renders the header section of a website, including
+ * navigation links, search bar, user profile icons, and a hamburger menu for mobile devices.
+ */
 import styles from "./Header.module.css";
 import { VscAccount } from "react-icons/vsc";
 import { FaRegHeart } from "react-icons/fa";

@@ -1,3 +1,4 @@
+/* This code is a React component called `BagItems`. */
 import { useSelector } from "react-redux";
 import BagItem from "./BagItem";
 import BagSummary from "./BagSummary";

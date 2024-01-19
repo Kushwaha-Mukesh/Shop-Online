@@ -1,3 +1,8 @@
+/**
+ * The EmptyBag function returns a React component that displays a message indicating that the bag is
+ * empty and prompts the user to add products to it.
+ * @returns The EmptyBag component is returning a JSX element.
+ */
 function EmptyBag() {
   return (
     <div className="emptyBag">

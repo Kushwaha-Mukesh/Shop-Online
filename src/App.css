@@ -1,3 +1,5 @@
+/* The CSS code provided is a set of styles for various elements in a web page. Here is a breakdown of
+what each section does: */
 * {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -96,17 +98,20 @@
 
  .product_item {
    display: flex;
-   flex-wrap: wrap;
    gap: 5rem;
    justify-content: center;
    align-items: center;
    width: 100vw;
-   height: 100vh;
    margin: 100px 0;
  }
 
  .product_item div {
-   width: 35%;
+   width: 35vw;
+ }
+
+ .image_box {
+  width: 100%;
+  height: 100%;
  }
 
  .item_details h5 {
@@ -115,7 +120,7 @@
 
  .item_details img {
    width: 5rem;
-   margin: 0 10px 30px 0;
+   margin: 0 10px 0 0;
    height: 5rem;
    border-radius: 5px;
  }
@@ -123,6 +128,10 @@
  .item_details img:hover {
    cursor: pointer;
    border: 2px solid rgb(133, 123, 123);
+ }
+
+ .item_details button {
+  margin-top: 30px;
  }
 
  .wishlist {
@@ -139,4 +148,15 @@
    align-items: center;
    background-color: transparent;
    color: black;
+}
+
+@media (max-width: 800px) {
+  .product_item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .product_item div {
+    width: 60vw;
+  }
 }
