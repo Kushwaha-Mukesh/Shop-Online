@@ -59,7 +59,8 @@ what each section does: */
 
  .bagItems {
    display: flex;
-   flex-wrap: wrap;
+   flex-direction: column;
+   align-items: center;
    margin: 50px auto 100px auto;
  }
 
@@ -69,11 +70,11 @@ what each section does: */
    align-items:center;
    flex-wrap: wrap;
    gap: 2rem;
-   width: 70%;
  }
 
  .bagSummary {
-    width: 30%;
+    margin-top: 100px;
+    width: 400px;
     height: fit-content;
  }
 
@@ -135,20 +136,16 @@ what each section does: */
  }
 
  .wishlist {
-   position: absolute;
-   height: 15rem;
-   width: 100%;
-   display: none;
-   font-size: 5rem;
+  position: absolute;
+  right: 2%;
+  top: 50%;
+  display: flex;
+  font-size: 1rem;
+  background-color: white;
+  color: black;
+  padding: 5px;
+  border-radius: 50%;
  }
-
- .productItem img:hover + .wishlist {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   background-color: transparent;
-   color: black;
-}
 
 @media (max-width: 800px) {
   .product_item {

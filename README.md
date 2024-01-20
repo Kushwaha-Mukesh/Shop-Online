@@ -1,8 +1,12 @@
-# React + Vite
+# Shop Online
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Hi, This is Mukesh Kushwaha.
 
-Currently, two official plugins are available:
+> I am an IT Engineer.
+> MERN stack aspirant.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+> This is a online shop website. It includes products listing, products searching, cart with cart summary, favorites and categories wise routing to different products. It is also responsive to different devices.
+
+> I have used ReactJs library to create this website and dummyjson api is used in the backend.
+
+> You can visit [shop online](https://shoptoonline.netlify.app/) website.
